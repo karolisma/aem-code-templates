@@ -1,0 +1,106 @@
+<templateSet group="Coral3">
+  <template name="dialog_coral3_with_one_tab" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;jcr:root xmlns:sling=&quot;http://sling.apache.org/jcr/sling/1.0&quot; xmlns:cq=&quot;http://www.day.com/jcr/cq/1.0&quot; xmlns:jcr=&quot;http://www.jcp.org/jcr/1.0&quot; xmlns:nt=&quot;http://www.jcp.org/jcr/nt/1.0&quot;&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    jcr:title=&quot;$dialogTitle$&quot;&#10;    sling:resourceType=&quot;cq/gui/components/authoring/dialog&quot;&gt;&#10;    &lt;content&#10;        jcr:primaryType=&quot;nt:unstructured&quot;&#10;        sling:resourceType=&quot;granite/ui/components/coral/foundation/container&quot;&gt;&#10;        &lt;items jcr:primaryType=&quot;nt:unstructured&quot;&gt;&#10;            &lt;tabs&#10;                jcr:primaryType=&quot;nt:unstructured&quot;&#10;                sling:resourceType=&quot;granite/ui/components/coral/foundation/tabs&quot;&#10;                maximized=&quot;{Boolean}true&quot;&gt;&#10;                &lt;items jcr:primaryType=&quot;nt:unstructured&quot;&gt;&#10;                    &lt;$tab1$&#10;                        jcr:primaryType=&quot;nt:unstructured&quot;&#10;                        jcr:title=&quot;$tabTitle$&quot;&#10;                        sling:resourceType=&quot;granite/ui/components/coral/foundation/container&quot;&gt;&#10;                        &lt;items jcr:primaryType=&quot;nt:unstructured&quot;&gt;&#10;                            &lt;columns&#10;                                jcr:primaryType=&quot;nt:unstructured&quot;&#10;                                sling:resourceType=&quot;granite/ui/components/foundation/container&quot;&gt;&#10;                                &lt;items jcr:primaryType=&quot;nt:unstructured&quot;&gt;&#10;                                    &#10;                                &lt;/items&gt;&#10;                            &lt;/columns&gt;&#10;                        &lt;/items&gt;&#10;                    &lt;/$tab1$&gt;&#10;                &lt;/items&gt;&#10;            &lt;/tabs&gt;&#10;        &lt;/items&gt;&#10;    &lt;/content&gt;&#10;&lt;/jcr:root&gt;" description="Coral UI 3 Dialog with a tab." toReformat="false" toShortenFQNames="true">
+    <variable name="dialogTitle" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="tab1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="tabTitle" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="textfield_coral3" value="&lt;$name$&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    sling:resourceType=&quot;granite/ui/components/coral/foundation/form/textfield&quot;&#10;    fieldDescription=&quot;$description$&quot;&#10;    fieldLabel=&quot;$label$&quot;&#10;    name=&quot;./$name$&quot;&#10;    required=&quot;{Boolean}$required$&quot;/&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="label" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="required" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="numberfield_coral3" value="&lt;$name$&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    sling:resourceType=&quot;granite/ui/components/coral/foundation/form/numberfield&quot;&#10;    name=&quot;./$name$&quot;&#10;    fieldLabel=&quot;$fieldLabel$&quot;&#10;    fieldDescription=&quot;$description$&quot;&#10;    min=&quot;$min$&quot;&#10;    max=&quot;$max$&quot;&#10;    defaultValue=&quot;{Long}$defaultValue$&quot;&#10;    step=&quot;$step$&quot;/&gt;" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="fieldLabel" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="min" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="max" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="defaultValue" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="step" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="select_coral3_with_datasource" value="&lt;$name$&#10;        jcr:primaryType=&quot;nt:unstructured&quot;&#10;        sling:resourceType=&quot;granite/ui/components/coral/foundation/form/select&quot;&#10;        name=&quot;./$name$&quot;&#10;        fieldLabel=&quot;$label$&quot;&#10;        fieldDescription=&quot;$description$&quot;&#10;        required=&quot;{Boolean}$required$&quot;&#10;        emptyText=&quot;$emptytext$&quot;&gt;&#10;    &lt;datasource&#10;            jcr:primaryType=&quot;nt:unstructured&quot;&#10;            sling:resourceType=&quot;$datasourceType$&quot;&#10;            paths=&quot;[$paths$]&quot;/&gt;&#10;&lt;/$name$&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="label" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="required" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="emptytext" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="datasourceType" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="paths" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="static_coral3_text_label" value="&lt;static&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    sling:resourceType=&quot;granite/ui/components/coral/foundation/text&quot;&#10;    text=&quot;$text$&quot;/&gt;" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="text" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="dropdown_select_coral3_static_elements" value="&lt;$nodeName$&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    sling:resourceType=&quot;granite/ui/components/coral/foundation/form/select&quot;&#10;    fieldLabel=&quot;$fieldLabel$&quot;&#10;    fieldDescription=&quot;$fieldDescription$&quot;&#10;    name=&quot;./$nodeName$&quot;&#10;    required=&quot;{Boolean}$required$&quot;&gt;&#10;    &lt;items jcr:primaryType=&quot;nt:unstructured&quot;&gt;&#10;        &lt;first jcr:primaryType=&quot;nt:unstructured&quot; &#10;            text=&quot;$itemText$&quot; &#10;            value=&quot;$itemValue$&quot; &#10;            selected=&quot;{Boolean}$selected$&quot;/&gt;&#10;    &lt;/items&gt;&#10;&lt;/$nodeName$&gt;" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="nodeName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="fieldLabel" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="fieldDescription" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="required" expression="" defaultValue="{Boolean}true" alwaysStopAt="true" />
+    <variable name="itemText" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="itemValue" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="selected" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="fieldset_coral3" value="&lt;$nodeName$&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    jcr:title=&quot;$title$&quot;&#10;    sling:resourceType=&quot;granite/ui/components/coral/foundation/form/fieldset&quot;&gt;&#10;    &lt;items jcr:primaryType=&quot;nt:unstructured&quot;&gt;&#10;    &lt;/items&gt;&#10;&lt;/$nodeName$&gt;" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="nodeName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="title" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="checkbox_coral3" value="&lt;$name$&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    sling:resourceType=&quot;granite/ui/components/coral/foundation/form/checkbox&quot;&#10;    fieldDescription=&quot;$description$&quot;&#10;    name=&quot;./$name$&quot;&#10;    text=&quot;$text$&quot;&#10;    uncheckedValue=&quot;{Boolean}false&quot;&#10;    value=&quot;{Boolean}true&quot;/&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="text" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="radiogroup_coral3" value="&lt;$name$&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    sling:resourceType=&quot;granite/ui/components/coral/foundation/form/radiogroup&quot;&#10;    fieldDescription=&quot;$description$&quot;&#10;    fieldLabel=&quot;$label$&quot;&#10;    name=&quot;./$name$&quot;&#10;    required=&quot;{Boolean}$required$&quot;&gt;&#10;    &lt;items jcr:primaryType=&quot;nt:unstructured&quot;&gt;&#10;        &lt;first&#10;            jcr:primaryType=&quot;nt:unstructured&quot;&#10;            sling:resourceType=&quot;granite/ui/components/foundation/form/radio&quot;&#10;            text=&quot;$text1$&quot;&#10;            value=&quot;$value1$&quot;&#10;            checked=&quot;{Boolean}true&quot;/&gt;&#10;        &lt;second&#10;            jcr:primaryType=&quot;nt:unstructured&quot;&#10;            sling:resourceType=&quot;granite/ui/components/foundation/form/radio&quot;&#10;            text=&quot;$text2$&quot;&#10;            value=&quot;$value2$&quot;/&gt;&#10;    &lt;/items&gt;&#10;&lt;/$name$&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="label" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="required" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="text1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="value1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="text2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="value2" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="textarea_coral3" value="&lt;$name$&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    sling:resourceType=&quot;granite/ui/components/coral/foundation/form/textarea&quot;&#10;    fieldDescription=&quot;$description$&quot;&#10;    fieldLabel=&quot;$label$&quot;&#10;    name=&quot;./$name$&quot;/&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="label" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="pathbrowser_coral3" value="&lt;$name$&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    sling:resourceType=&quot;granite/ui/components/coral/foundation/form/pathbrowser&quot;&#10;    fieldDescription=&quot;$description$&quot;&#10;    fieldLabel=&quot;$label$&quot;&#10;    name=&quot;./$name$&quot;&#10;    rootPath=&quot;/content&quot;&#10;    required=&quot;{Boolean}$true$&quot;/&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="label" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="true" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+</templateSet>
