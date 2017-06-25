@@ -1,0 +1,32 @@
+<templateSet group="AEM Common Components">
+  <template name="richtext" value="&lt;$name$&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    sling:resourceType=&quot;cq/gui/components/authoring/dialog/richtext&quot;&#10;    fieldDescription=&quot;$description$&quot;&#10;    fieldLabel=&quot;$label$&quot;&#10;    name=&quot;./$name$&quot;&#10;    required=&quot;{Boolean}$required$&quot;&#10;    useFixedInlineToolbar=&quot;{Boolean}$fixedInlineToolbar$&quot;/&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="label" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="required" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="fixedInlineToolbar" expression="" defaultValue="&quot;true&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="tagspicker" value="&lt;$name$&#10;    sling:resourceType=&quot;cq/gui/components/common/tagspicker&quot;&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    allowCreate=&quot;{Boolean}$allowCreate$&quot;&#10;    fieldLabel=&quot;$label$&quot;&#10;    fieldDescription=&quot;$description$&quot;&#10;    required=&quot;{Boolean}$required$&quot;&#10;    name=&quot;./cq:tags&quot;&#10;    tagsPath=&quot;/etc/tags/$path$&quot;/&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="allowCreate" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="label" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="required" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="path" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="&lt;abbreviation&gt;" value="&lt;$name$&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    sling:resourceType=&quot;commerce/gui/components/common/assetpicker&quot;&#10;    fieldDescription=&quot;$description$&quot;&#10;    fieldLabel=&quot;$title$&quot;&#10;    name=&quot;./$name$/fileReference&quot;&#10;    required=&quot;{Boolean}$required$&quot;/&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="title" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="required" expression="" defaultValue="&quot;true&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+</templateSet>
