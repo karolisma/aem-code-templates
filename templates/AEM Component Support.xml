@@ -1,0 +1,22 @@
+<templateSet group="AEM Component Support">
+  <template name="component_content_xml" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;jcr:root xmlns:sling=&quot;http://sling.apache.org/jcr/sling/1.0&quot; xmlns:cq=&quot;http://www.day.com/jcr/cq/1.0&quot; xmlns:jcr=&quot;http://www.jcp.org/jcr/1.0&quot;&#10;    jcr:primaryType=&quot;cq:Component&quot;&#10;    jcr:title=&quot;$TITLE$&quot;&#10;    sling:resourceSuperType=&quot;$resourceType$&quot;&#10;    componentGroup=&quot;$GROUP$&quot;/&gt;&#10;" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="TITLE" expression="" defaultValue="&quot;Component Title&quot;" alwaysStopAt="true" />
+    <variable name="resourceType" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="GROUP" expression="" defaultValue="&quot;Content&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="edit_config_empty" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;jcr:root xmlns:cq=&quot;http://www.day.com/jcr/cq/1.0&quot; xmlns:jcr=&quot;http://www.jcp.org/jcr/1.0&quot;&#10;    jcr:primaryType=&quot;cq:EditConfig&quot;&gt;&#10;&lt;/jcr:root&gt;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="edit_config_listeners" value="&lt;cq:listeners jcr:primaryType=&quot;cq:EditListenersConfig&quot;&#10;    $actionName$=&quot;$action$&quot;/&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="actionName" expression="" defaultValue="&quot;afteredit&quot;" alwaysStopAt="true" />
+    <variable name="action" expression="" defaultValue="&quot;REFRESH_PAGE&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+</templateSet>
